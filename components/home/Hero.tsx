@@ -12,7 +12,7 @@ function Hero() {
         {/* <p className="text-xl mb-5">Passionate Full Stack Developer crafting and designing captivating web experiences, merging creativity and technology seamlessly.</p> */}
         <h1 className="heroTitle inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-4xl md:text-5xl lg:text-6xl tracking-tighter mb-10 font-bold heroShinyBg">
           I enjoy <span className="heroShiny1 text-fun-pink">creating</span> and{" "}
-          <span className="heroShiny2 text-fun-pink">crafting</span> for the web fuels my <span className="heroShiny2 text-fun-pink">passion</span> as a <span className="heroShiny2 text-fun-pink">full stack</span> developer.
+          <span className="heroShiny2 text-fun-pink">crafting</span> for the web, which fuels my <span className="heroShiny2 text-fun-pink">passion</span> as a <span className="heroShiny2 text-fun-pink">full stack</span> developer.
 
           <img
             className="sqD squiggle-hero-html w-16 top-[-90px] right-[5%] sm:top-[-90px] sm:right-[170px]"

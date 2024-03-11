@@ -6,7 +6,7 @@ function Experience() {
     <div className="max-w-5xl m-auto">
       
       {experiences.map((experience, index) => (
-        <div key={index} className="mb-10 bg-black border border-gray-800 p-5 rounded-lg text-white flex items-center">
+        <div key={index} className="mb-10 bg-#0C0C0C border border-gray-800 p-5 rounded-lg text-white flex items-center">
           {/* Company Logo */}
           <img src={experience.logo} alt={`${experience.company} Logo`} className="w-20 h-20 mr-8 rounded-lg" />
 

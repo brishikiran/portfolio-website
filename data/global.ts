@@ -41,7 +41,7 @@ export const routes: Route[] = [
   },
   {
     title: "GitHub",
-    path: "https://github.com/rishikiran2260039",
+    path: "https://github.com/brishikiran",
   },
   {
     title: "Resume",
@@ -78,7 +78,7 @@ export const footer: Footer = {
       links: [
         {
           name: "GitHub",
-          link: "https://github.com/rishikiran2260039",
+          link: "https://github.com/brishikiran",
           icon: "/static/icons/github-f.svg",
           leavesWebsite: true,
         },

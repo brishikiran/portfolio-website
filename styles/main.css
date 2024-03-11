@@ -4,7 +4,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  @apply bg-bg;
+  background-image: linear-gradient(to bottom, #161616, #060606);
 }
 
 body::-webkit-scrollbar {

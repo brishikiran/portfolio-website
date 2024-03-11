@@ -112,7 +112,7 @@ function Footer() {
           <div className="mt-2 text-xs ">
             Made by{" "}
             <a
-              href="mailto:contact@braydentw.io"
+              href="mailto:rishi.123kiran@gmail.com"
               className="text-fun-gray-light font-medium"
             >
               Rishi Kiran Reddy
@@ -124,7 +124,7 @@ function Footer() {
       <div className="mt-8 text-center sm:text-right sm:-mt-12">
         <a
           className="w-auto inline-flex items-center sm:w-auto font-bold flex-shrink text-xs border border-fun-pink px-4 py-2 rounded-xl text-fun-pink cursor-pointer opacity-50"
-          href="https://github.com/rishikiran2260039/portfolio-website"
+          href="https://github.com/brishikiran/portfolio-website"
           target="_blank"
           rel="nooreferrer"
         >
