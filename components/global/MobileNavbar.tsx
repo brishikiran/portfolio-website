@@ -1,57 +1,59 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { routes } from '@/data/global';
+import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
 
-import Link from "next/link";
-import {routes} from "@/data/global";
-import useDelayedRender from "use-delayed-render";
-import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa'; // Import relevant icons
 export default function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
-    isMenuOpen,
-    {
-      enterDelay: 20,
-      exitDelay: 300,
-    }
-  );
+  const [isMenuRendered, setIsMenuRendered] = useState(false);
 
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     } else {
       setIsMenuOpen(true);
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     }
   }
 
   useEffect(() => {
+    if (isMenuOpen) {
+      const timeoutId = setTimeout(() => {
+        setIsMenuRendered(true);
+      }, 20);
+      return () => clearTimeout(timeoutId);
+    } else {
+      const timeoutId = setTimeout(() => {
+        setIsMenuRendered(false);
+      }, 300);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     return function cleanup() {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, []);
 
   return (
     <nav>
-      <div
-        className={`w-full justify-between flex items-center ${isMenuRendered && 'bg-bg'} p-5`}
-        style={{ zIndex: 101 }}
-      >
+      <div className={`w-full justify-between flex items-center ${isMenuRendered && 'bg-bg'} p-5`} style={{ zIndex: 101 }}>
         <li className="list-none font-bold text-lg">
           <Link href="/">
-          <span className="font-black text-xl flex items-center">
-            <img
-              className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500"
-              src="/static/logos/logo_no_text.svg"
-              width="60"
-            />
-            {"RishiKiran".split("").map((letter, index) => {
-              return (
+            <span className="font-black text-xl flex items-center">
+              <img
+                className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500"
+                src="/static/logos/logo_no_text.svg"
+                width="60"
+              />
+              {'RishiKiran'.split('').map((letter, index) => (
                 <span key={index} className="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">
                   {letter}
                 </span>
-              );
-            })}
-          </span>
+              ))}
+            </span>
           </Link>
         </li>
         <button
@@ -64,16 +66,10 @@ export default function MobileNavbar() {
           <CrossIcon data-hide={!isMenuOpen} />
         </button>
       </div>
-      {isMenuMounted && (
-        <ul
-          className={`menu flex flex-col absolute bg-bg ${isMenuRendered && 'menuRendered'}`}
-        >
+      {isMenuRendered && (
+        <ul className={`menu flex flex-col absolute bg-bg menuRendered`}>
           {routes.map((item, index) => (
-            <li
-              key={index}
-              className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
-              style={{ transitionDelay: `${150 + index * 25}ms` }}
-            >
+            <li key={index} className="border-b border-gray-900 text-gray-100 text-sm font-semibold" style={{ transitionDelay: `${150 + index * 25}ms` }}>
               <a
                 href={item.path}
                 className="flex w-auto pb-4"
