@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "GPT Bio Geneartor",
-    desc: "Beautiful HTML templates ready-made for your next landing page.",
+    desc: "Developed a cutting-edge Bio Generator application for seamless generation of personalized biographies.",
     img: "/static/projects/biogen.png",
     link: "https://bio-generator-gpt-rust.vercel.app/",
     github: "https://github.com/brishikiran/bio-generator-gpt",
