@@ -27,10 +27,10 @@ export const routes: Route[] = [
     title: "Home",
     path: "/",
   },
-  {
-    title: "Experience",
-    path: "/experience",
-  },
+  // {
+  //   title: "Experience",
+  //   path: "/experience",
+  // },
   {
     title: "Projects",
     path: "/projects",
