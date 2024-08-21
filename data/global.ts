@@ -60,11 +60,11 @@ export const footer: Footer = {
           link: "/",
           leavesWebsite: false,
         },
-        {
-          name: "Experience",
-          link: "/experience",
-          leavesWebsite: false,
-        },
+        // {
+        //   name: "Experience",
+        //   link: "/experience",
+        //   leavesWebsite: false,
+        // },
         {
           name: "Projects",
           link: "/projects",
