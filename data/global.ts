@@ -42,11 +42,7 @@ export const routes: Route[] = [
   {
     title: "GitHub",
     path: "https://github.com/brishikiran",
-  },
-  {
-    title: "Resume",
-    path: "https://drive.google.com/file/d/1I1_WwtybK2ruJ8hj4csH3ZBaCw4ArjHi/view?usp=sharing",
-  },
+  }
 ];
 
 
