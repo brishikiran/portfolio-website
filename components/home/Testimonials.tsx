@@ -34,7 +34,7 @@ function Testimonials() {
               <br />
               <span className="font-monospace text-fun-pink">Institution:</span> Sreyas Institute of Technology
               <br />
-              <span className="font-monospace text-fun-pink">Graduation Year:</span> 2020
+              <span className="font-monospace text-fun-pink">Graduation Year:</span> 2019
             </p>
           </div>
         </div>
